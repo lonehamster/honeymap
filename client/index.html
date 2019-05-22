@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>蜜罐地图</title>
+  <link rel="stylesheet" href="css/honeymap.css" type="text/css" media="screen"/>
+  <link rel="stylesheet" href="extern/jquery-jvectormap-1.0.css" type="text/css" media="screen"/>
+  <link rel="stylesheet" href="extern/bootstrap.min.css" type="text/css" media="screen"/>
+  <link href='https://fonts.googleapis.com/css?family=Ubuntu+Mono' rel='stylesheet' type='text/css'>
+  <meta content="Florian Weingarten, Mark Schloesser, Johannes Gilger" name="author" />
+  <script src="extern/sockjs-0.3.js"></script>
+  <script src="extern/jquery-1.7.2.min.js"></script>
+  <script src="extern/jquery-jvectormap-1.0.min.js"></script>
+  <script src="extern/jquery-jvectormap-world-mill-en.js"></script>
+  <script src="extern/bootstrap.js"></script>
+  <script src="extern/jquery-transit.js"></script>
+</head>
+
+<body>
+  <div id="world-map"></div>
+  <div id="log"></div>
+  <div id="logo1"><a href="http://www.threatstream.com/"><img src="img/ts_logo.png"></a></div>
+  <div id="logo2"><a href="http://github.com/lonehamster/mycode"><img src="img/logo.png"></a></div>
+  <div id="helpbtn"><a href="#helpmodal" data-toggle="modal"><img src="img/help.png" alt="Help" /></a></div>
+
+  <div class="modal hide" id="helpmodal" tabindex="-1" role="dialog" aria-labelledby="helpmodal" aria-hidden="true">
+    <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+      <h3>说明</h3>
+    </div>
+    <div class="modal-body">
+      <p>
+        *您现在查看的是 <b>蜜罐地图</b>，这是一个显示实时攻击的地图
+        地图上红色的代表攻击者，黄色的代表蜜罐传感器。
+      </p>
+      <p>
+        *下方会显示实时的来自于哪个国家的攻击者和攻击了哪一个蜜罐，后面的是保留两位小数的经纬度。
+      </p>
+      <p>
+	*鼠标放在地图上会显示来自所指向国家的各个蜜罐的攻击次数和总的攻击次数。
+      </p>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-primary" data-dismiss="modal" aria-hidden="true">我知道了</button>
+    </div>
+  </div>
+
+  <script src="js/honeymap.js"></script>
+</body>
+</html>
